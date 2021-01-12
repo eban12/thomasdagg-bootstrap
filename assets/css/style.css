@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Yeseva+One&display=swap");
+
+main {
+  position: relative;
+  display: block;
+  left: 250px;
+  width: 100vw;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  color: #aaaaaa;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-family: "Yeseva One", cursive;
+  font-size: 2.2rem;
+  padding: 20px 5px;
+  color: #b4b4b4;
+}
+
+.navbar-brand span {
+  color: #fc8e20;
+}
+
+.navbar-brand:hover {
+  color: #b4b4b4;
+}
+
+.nav-menu a {
+  color: #b4b4b4;
+}
+
+.nav-menu li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.copyright {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+.copyright a {
+  color: #b4b4b4;
+  font-size: 10px;
+}
+
+.copyright a:hover,
+.nav-menu a:hover {
+  text-decoration: none;
+  color: #ff9933;
+}
+
+.active a {
+  color: #ff9933;
+}
