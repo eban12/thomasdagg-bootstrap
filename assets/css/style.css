@@ -114,6 +114,30 @@ nav .navbar-brand {
   display: block;
 }
 
+main > .row > div {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: transparent;
+  font-size: 27px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.overlay:hover {
+  color: white;
+}
+
 @media only screen and (max-width: 750px) {
   #sidebar.visible {
     display: none;
