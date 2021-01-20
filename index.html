@@ -19,7 +19,12 @@
   </head>
 
   <body>
-    <section id="sidebar" class="container pl-4">
+    <nav class="nav navbar">
+      <a href="index.html" class="navbar-brand">eyob<span>alemu</span></a>
+      <i class="fa fa-bars show" id="sidebarCollapse" aria-hidden="true"></i>
+      <i class="fa fa-times" id="closeOvelay" aria-hidden="true"></i>
+    </nav>
+    <section id="sidebar" class="visible container pl-4">
       <div>
         <a href="index.html" class="navbar-brand mb-2"
           >eyob<span>alemu</span></a
@@ -70,7 +75,7 @@
       </div>
     </section>
 
-    <main class="px-4">
+    <main class="px-4 mLeft" id="main">
       <div class="row mt-4">
         <div class="col-sm-4 col-lg-3 p-1 pl-2 pb-2">
           <img
@@ -202,5 +207,22 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").removeClass("visible");
+          $("#main").removeClass("mLeft");
+          $(".fa-times").addClass("show");
+          $(".fa-bars").removeClass("show");
+        });
+
+        $("#closeOvelay").on("click", function () {
+          $("#sidebar").addClass("visible");
+          $("#main").addClass("mLeft");
+          $(".fa-times").removeClass("show");
+          $(".fa-bars").addClass("show");
+        });
+      });
+    </script>
   </body>
 </html>

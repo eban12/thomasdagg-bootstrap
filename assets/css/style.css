@@ -1,9 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Yeseva+One&display=swap");
 
+body {
+  color: #aaaaaa;
+  overflow-x: hidden;
+}
+
 main {
   display: block;
+  margin-left: 350px;
+  transition: all 0.3s;
+}
+
+.mLeft {
   margin-left: 225px;
+}
+
+.nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: white;
+  display: none;
 }
 
 #sidebar {
@@ -14,10 +34,15 @@ main {
   height: 100vh;
   background-color: #fff;
   color: #aaaaaa;
-  z-index: 9999;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s;
+}
+
+#sidebar.visible {
+  display: flex;
 }
 
 .navbar-brand {
@@ -25,6 +50,10 @@ main {
   font-size: 2rem;
   padding: 18px 5px;
   color: #b4b4b4;
+}
+
+nav .navbar-brand {
+  padding: 10px 13px;
 }
 
 .navbar-brand span {
@@ -73,12 +102,41 @@ main {
   height: 100%;
 }
 
+.fa-bars,
+.fa-times {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  transition: all 1s;
+}
+
+.show {
+  display: block;
+}
+
 @media only screen and (max-width: 750px) {
-  #sidebar {
+  #sidebar.visible {
     display: none;
   }
 
-  main {
+  .nav.navbar {
+    display: flex;
+  }
+
+  .mLeft {
     margin-left: 0;
+  }
+
+  main {
+    margin-top: 70px;
+    width: 100vw;
+  }
+
+  .nav.navbar {
+    padding: 10px;
+  }
+
+  main > .row > div {
+    margin-right: 20px;
   }
 }
